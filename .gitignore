@@ -1,0 +1,55 @@
+# =============================================================
+# .gitignore — gis-pipeline-replacement-tracking
+# =============================================================
+
+# ── Datos sensibles — NUNCA subir ────────────────────────────
+*.gdb/
+*.mxd
+*.aprx
+*.sde
+
+# CAD con datos reales
+*.dwg
+*.dxf
+
+# Tablas y planillas con datos de empresa
+*.xls
+*.xlsx
+*.csv
+*.dbf
+
+# Presentaciones con datos reales
+*.pptx
+*.ppt
+
+# Documentos con información interna
+*.docx
+*.doc
+*.pdf
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+env/
+venv/
+.venv/
+
+# ── Sistema operativo ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# ── IDEs ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+
+# ── Temporales ────────────────────────────────────────────────
+*.tmp
+*.bak
+*.swp
+~$*
+*.log
