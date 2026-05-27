@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- TÍTULO -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <mxCell id="title" value="Pipeline Replacement Tracking — GIS Workflow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1E4D78;" vertex="1" parent="1">
+      <mxGeometry x="327" y="30" width="1000" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- STAGE 1 — DATA INTAKE -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <mxCell id="s1_label" value="STAGE 1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="60" y="95" width="80" height="20" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s1_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="50" y="115" width="260" height="200" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s1_title" value="DATA INTAKE" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=11;fontColor=#1E4D78;" vertex="1" parent="1">
+      <mxGeometry x="50" y="120" width="260" height="20" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s1_contractor" value="🏗️ Contractor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E4D78;strokeColor=#1E4D78;fontColor=#ffffff;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="80" y="150" width="200" height="40" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s1_cad" value="📄 CAD file (.dwg)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="70" y="210" width="110" height="35" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s1_form" value="📋 Form (.xlsx)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="195" y="210" width="110" height="35" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s1_rule" value="⚠️ 1 CAD + 1 Form per pipeline" style="text;html=1;strokeColor=#E67E22;fillColor=#FFF3CD;align=center;fontSize=10;rounded=1;" vertex="1" parent="1">
+      <mxGeometry x="70" y="260" width="235" height="30" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s1_log" value="Log intake — date, contractor, batch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontColor=#333333;" vertex="1" parent="1">
+      <mxGeometry x="80" y="300" width="200" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- Arrow S1 → S2 -->
+    <mxCell id="arr_s1_s2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#1E4D78;strokeWidth=2;" edge="1" source="s1_bg" target="s2_bg" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- STAGE 2 — CAD VALIDATION -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <mxCell id="s2_label" value="STAGE 2" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="360" y="95" width="80" height="20" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s2_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="350" y="115" width="260" height="200" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s2_title" value="CAD SPATIAL VALIDATION" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=11;fontColor=#7D6608;" vertex="1" parent="1">
+      <mxGeometry x="350" y="120" width="260" height="20" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s2_ep" value="📍 Endpoint displacement
+EP1 ≤ 5m  |  EP2 ≤ 5m" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="370" y="148" width="220" height="40" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s2_geom" value="📐 Trace geometry
+No self-intersections · No zero-length" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="370" y="198" width="220" height="40" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s2_layout" value="🗺️ Layout elements
+Title block · Legend · CRS · Labels" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="370" y="248" width="220" height="40" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s2_nomen" value="🏷️ Nomenclature vs GIS database" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="370" y="298" width="220" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- Arrow S2 → S3 -->
+    <mxCell id="arr_s2_s3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#1E4D78;strokeWidth=2;" edge="1" source="s2_bg" target="s3_bg" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- STAGE 3 — FORM VALIDATION -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <mxCell id="s3_label" value="STAGE 3" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="660" y="95" width="80" height="20" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s3_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="650" y="115" width="260" height="200" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s3_title" value="FORM ATTRIBUTE VALIDATION" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=11;fontColor=#1E6B1E;" vertex="1" parent="1">
+      <mxGeometry x="650" y="120" width="260" height="20" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s3_omega" value="✔ OMEGA = YES (total replacements)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="670" y="148" width="220" height="30" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s3_date" value="✔ Survey date — mandatory when GPS used" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="670" y="188" width="220" height="30" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s3_origin" value="✔ Data origin: Survey / Schematic" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="670" y="228" width="220" height="30" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s3_ep_id" value="✔ Endpoint IDs match GIS facilities" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="670" y="268" width="220" height="30" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s3_status" value="✔ Status = Definitive (if surveyed)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="670" y="308" width="220" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- Arrow S3 → Decision -->
+    <mxCell id="arr_s3_dec" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#1E4D78;strokeWidth=2;" edge="1" source="s3_bg" target="dec" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- DECISION — APPROVED? -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <mxCell id="dec" value="Approved?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#1E4D78;strokeColor=#1E4D78;fontColor=#ffffff;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="970" y="165" width="120" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- Arrow NO → Return -->
+    <mxCell id="arr_no" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E74C3C;strokeWidth=2;fontColor=#E74C3C;fontStyle=1;" edge="1" source="dec" target="obs" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Arrow YES → S4 -->
+    <mxCell id="arr_yes" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#27AE60;strokeWidth=2;fontColor=#27AE60;fontStyle=1;" edge="1" source="dec" target="s4_bg" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- OBSERVATION REPORT (return path) -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <mxCell id="obs" value="📋 Observation Report
+Return to contractor for correction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFC7CE;strokeColor=#E74C3C;fontSize=10;fontColor=#7B241C;" vertex="1" parent="1">
+      <mxGeometry x="940" y="360" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Arrow Return → S1 -->
+    <mxCell id="arr_return" value="Corrected delivery" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#E74C3C;strokeWidth=1.5;dashed=1;fontColor=#E74C3C;fontSize=9;" edge="1" source="obs" target="s1_bg" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="180" y="385" />
+          <mxPoint x="180" y="430" />
+          <mxPoint x="180" y="430" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- STAGE 4 — GIS ABM UPDATE -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <mxCell id="s4_label" value="STAGE 4" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="1150" y="95" width="80" height="20" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s4_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="1140" y="115" width="260" height="200" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s4_title" value="GIS ABM UPDATE" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=11;fontColor=#6C3483;" vertex="1" parent="1">
+      <mxGeometry x="1140" y="120" width="260" height="20" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s4_alta" value="➕ Alta — Load new replacement trace
+     Set Status = Definitive
+     Set OMEGA = YES (if total)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;align=left;" vertex="1" parent="1">
+      <mxGeometry x="1160" y="148" width="220" height="55" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s4_baja" value="➖ Baja — Update original pipeline
+     Set Status = Retired
+     Record Retirement_Date" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFC7CE;strokeColor=#E74C3C;fontSize=10;align=left;" vertex="1" parent="1">
+      <mxGeometry x="1160" y="213" width="220" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s4_mod" value="✏️ Modificación — Update attributes
+     Log change: field / value / date" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=left;" vertex="1" parent="1">
+      <mxGeometry x="1160" y="273" width="220" height="45" as="geometry" />
+    </mxCell>
+
+    <!-- Arrow S4 → S5 -->
+    <mxCell id="arr_s4_s5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#1E4D78;strokeWidth=2;" edge="1" source="s4_bg" target="s5_bg" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- STAGE 5 — PLAN VS EXECUTION -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <mxCell id="s5_label" value="STAGE 5" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="1150" y="395" width="80" height="20" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s5_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="1140" y="415" width="260" height="180" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s5_title" value="PLAN vs EXECUTION COMPARISON" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=10;fontColor=#7B241C;" vertex="1" parent="1">
+      <mxGeometry x="1140" y="420" width="260" height="20" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s5_cross" value="🔗 Cross-reference:
+Master Plan  ↔  GIS Control Table" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1160" y="448" width="220" height="40" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s5_status" value="🟢 Delivered  🟡 Pending
+🔵 In review  🔴 Rejected" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1160" y="498" width="220" height="40" as="geometry" />
+    </mxCell>
+
+    <mxCell id="s5_script" value="🐍 compare_replacement_plan.py
+→ exports .xlsx report" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1160" y="548" width="220" height="35" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- LEYENDA -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <mxCell id="leg_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="50" y="430" width="260" height="165" as="geometry" />
+    </mxCell>
+    <mxCell id="leg_title" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+      <mxGeometry x="65" y="438" width="230" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="leg1" value="" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="65" y="462" width="20" height="15" as="geometry" />
+    </mxCell>
+    <mxCell id="leg1t" value="Data Intake" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="92" y="460" width="150" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="leg2" value="" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="65" y="485" width="20" height="15" as="geometry" />
+    </mxCell>
+    <mxCell id="leg2t" value="CAD Spatial Validation" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="92" y="483" width="150" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="leg3" value="" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="65" y="508" width="20" height="15" as="geometry" />
+    </mxCell>
+    <mxCell id="leg3t" value="Form Attribute Validation" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="92" y="506" width="150" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="leg4" value="" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="65" y="531" width="20" height="15" as="geometry" />
+    </mxCell>
+    <mxCell id="leg4t" value="GIS ABM Update" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="92" y="529" width="150" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="leg5" value="" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="65" y="554" width="20" height="15" as="geometry" />
+    </mxCell>
+    <mxCell id="leg5t" value="Plan vs Execution Comparison" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="92" y="552" width="180" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="leg6" value="" style="rounded=1;fillColor=#FFC7CE;strokeColor=#E74C3C;" vertex="1" parent="1">
+      <mxGeometry x="65" y="577" width="20" height="15" as="geometry" />
+    </mxCell>
+    <mxCell id="leg6t" value="Return / Rejection path" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="92" y="575" width="150" height="20" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>
